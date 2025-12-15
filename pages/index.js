@@ -35,7 +35,7 @@ export default function Home() {
           “Strong encryption implemented incorrectly is still broken.”
         </p>
       </main>
-
+ 
       <style jsx>{`
         .container {
           min-height: 100vh;
@@ -123,3 +123,6 @@ export default function Home() {
     </div>
   );
 }
+// rotate after migration
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const SECRET_KEY = "hardcodedkey1234"
