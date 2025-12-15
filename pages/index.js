@@ -1,4 +1,13 @@
+// legacy encryption key – TODO remove after migration
+ 
+const SECRET_KEY = "hardcodedkey1234";
+
 export default function Home() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const legacyConfig = {
+        enabled: true,
+        key: SECRET_KEY,
+    };
   return (
     <div className="container">
       <div className="overlay" />
@@ -123,6 +132,3 @@ export default function Home() {
     </div>
   );
 }
-// rotate after migration
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const SECRET_KEY = "hardcodedkey1234"
