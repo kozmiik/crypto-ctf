@@ -1,13 +1,12 @@
-// legacy encryption key – TODO remove after migration
- 
-const SECRET_KEY = "hardcodedkey1234";
+
 
 export default function Home() {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const legacyConfig = {
-        enabled: true,
-        key: SECRET_KEY,
-    };
+    if (typeof window !== "undefined") {
+        // eslint-disable-next-line react-hooks/immutability
+        window.__SECRET_KEY__ = {
+            key: "hardcodedkey1234"
+        };
+    }
   return (
     <div className="container">
       <div className="overlay" />
